@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<div class="jumbotron">
+    <br>
+
+    <h3>informasi</h3>
+    <!--form informasi-->
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.subjek.label(class="form-control-label")}}
+            {% if form.subjek.errors %}
+            {{form.subjek(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.subjek.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.subjek(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.kategori.label(class="form-control-label")}}
+            {% if form.kategori.errors %}
+            {{form.kategori(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.kategori.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.kategori(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.detail_informasi.label(class="form-control-label")}}
+            {% if form.detail_informasi.errors %}
+            {{form.detail_informasi(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.detail_informasi.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.detail_informasi(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            {{form.submit(class="btn btn-primary")}}
+            <a class="btn btn-secondary" href="{{url_for('rmahasiswa.informasi')}}">Kembali</a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

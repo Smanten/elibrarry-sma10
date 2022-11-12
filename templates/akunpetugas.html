@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<div class="jumbotron">
+    <br>
+    <h1 class="display-4">Hola {{current_user.nama}}!</h1>
+    <p class="lead">Thank you for sign in and Welcome to my website</p>
+    <hr class="my-4">
+    <p>Klik untuk memulai pengaduan anda.</p>
+    <a class="btn btn-warning btn-lg" href="{{url_for('rpetugas.pj')}}" role="button">Mulai Pinjam</a>
+</div>
+{% endblock %}

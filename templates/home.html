@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<div class="jumbotron">
+    <h1 class="display-4">PERPUSTAKAAN</h1>
+    <p class="lead"> Rumah para Buku</p>
+    <hr class="my-4">
+    <p>Taukah anda ?
+
+        Bahwa Perpustakaan Pertama Di Dunia ternyata terletak 
+        di Iraq (Mosul) sejak tahun 668, perpustakaan ini dinamakan 
+        The Library of Ashurbanipal yang didirikan oleh Ashurbanipal, raja Assyrians.</p>
+    {% if current_user.is_authenticated %}
+
+    {% else %}
+    <a class="btn btn-primary btn-lg" href="{{url_for('rpetugas.login_petugas')}}" role="button">Login</a>
+    {% endif %}
+</div>
+{% endblock %}

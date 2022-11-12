@@ -1,0 +1,191 @@
+{% extends "base.html" %}
+
+{% block konten%}
+
+<div class="jumbotron">
+    <br>
+
+    <h3>Edit Peminjaman</h3>
+    <!--form pengaduan-->
+    <form method="POST">
+        {{form.hidden_tag()}}
+        <div class="form-group">
+            {{form.nama.label(class="form-control-label")}}
+            {% if form.nama.errors %}
+            {{form.nama(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.nama.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.nama(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.nohp.label(class="form-control-label")}}
+            {% if form.nohp.errors %}
+            {{form.nohp(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.nohp.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.nohp(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.kategori.label(class="form-control-label")}}
+            {% if form.kategori.errors %}
+            {{form.kategori(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.kategori.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.kategori(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.kategori2.label(class="form-control-label")}}
+            {% if form.kategori2.errors %}
+            {{form.kategori2(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.kategori2.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.kategori2(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+        <div class="form-group">
+            {{form.alamat.label(class="form-control-label")}}
+            {% if form.alamat.errors %}
+            {{form.alamat(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.alamat.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.alamat(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+
+        <br>
+        <div class="form-group">
+            {{form.judul_buku.label(class="form-control-label")}}
+            {% if form.judul_buku.errors %}
+            {{form.judul_buku(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.judul_buku.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.judul_buku(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+
+        <br>
+        <div class="form-group">
+            {{form.jumlahbuku.label(class="form-control-label")}}
+            {% if form.jumlahbuku.errors %}
+            {{form.jumlahbuku(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.jumlahbuku.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.jumlahbuku(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        
+        <br>
+        <div class="form-group">
+            {{form.penerbit.label(class="form-control-label")}}
+            {% if form.penerbit.errors %}
+            {{form.penerbit(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.penerbit.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.penerbit(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+
+
+
+        <br>
+        <div class="form-group">
+            {{form.nama_petugas.label(class="form-control-label")}}
+            {% if form.nama_petugas.errors %}
+            {{form.nama_petugas(class="form-control is-invalid")}}
+
+            <div class="invalid-feedback">
+                {% for error in form.nama_petugas.errors %}
+                <span>{{error}}</span>
+                {% endfor %}
+            </div>
+            {%else%}
+
+            {{form.nama_petugas(class="form-control")}}
+
+            {%endif%}
+
+        </div>
+        <br>
+
+
+        <div class="form-group">
+            {{form.submit(class="btn btn-primary")}}
+            <a class="btn btn-secondary" href="{{url_for('rpetugas.pemberitahuan')}}">Kembali</a>
+        </div>
+    </form>
+</div>
+
+
+{% endblock %}

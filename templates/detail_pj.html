@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block konten%}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Detail Peminjaman</h4>
+    <!--Tabel-->
+    <table class="table table-hover">
+        <tr>
+            <td>Nama</td>
+            <td>{{dt_pj.nama}}</td>
+        </tr>
+        <tr>
+            <td>No hp</td>
+            <td>{{dt_pj.nohp}}</td>
+        </tr>
+        <tr>
+            <td>Kelas</td>
+            <td>{{dt_pj.kategori}}</td>
+        </tr>
+        <tr>
+            <td>Jurusan</td>
+            <td>{{dt_pj.kategori2}}</td>
+        </tr>
+        <tr>
+            <td>Judul Buku</td>
+            <td>{{dt_pj.judul_buku}}</td>
+        </tr>
+        <tr>
+            <td>Jumlah Buku</td>
+            <td>{{dt_pj.jumlahbuku}}</td>
+        </tr>
+        <tr>
+            <td>Tgl Peminjaman</td>
+            <td>{{dt_pj.tgl_post}}</td>
+        </tr>
+        <tr>
+            <td>Tgl Peminjaman</td>
+            <td>{{dt_pj.tgl_post}}</td>
+        </tr>
+        <tr>
+            <td>Penerbit</td>
+            <td>{{dt_pj.penerbit}}</td>
+        </tr>
+        <tr>
+            <td>Nama Petugas</td>
+            <td>{{dt_pj.nama_petugas}}</td>
+        </tr>
+    </table>
+</div>
+
+<a class="btn btn-success" href="{{url_for('rpetugas.pj')}}">Kembali</a>
+
+{% endblock %}

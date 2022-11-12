@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block konten%}
+<div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">Detail Informasi</h4>
+    <!--Tabel-->
+    <table class="table table-hover">
+        <tr>
+            <td>Nama</td>
+            <td>{{dt_informasi.mahasiswa.nama}}</td>
+        </tr>
+        <tr>
+            <td>NPM</td>
+            <td>{{dt_informasi.mahasiswa.npm}}</td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td>{{dt_informasi.mahasiswa.email}}</td>
+        </tr>
+        <tr>
+            <td>Kelas</td>
+            <td>{{dt_informasi.mahasiswa.kelas}}</td>
+        </tr>
+        <tr>
+            <td>Alamat</td>
+            <td>{{dt_informasi.mahasiswa.alamat}}</td>
+        </tr>
+    </table>
+</div>
+
+<div class="alert alert-danger" role="alert">
+    <table class="table table-hover">
+        <h4 class="alert-heading">Data Informasi</h4>
+        <hr>
+        <tr>
+            <td>Tgl Post</td>
+            <td>{{dt_informasi.tgl_baca}}</td>
+        </tr>
+        <tr>
+            <td>Subjek</td>
+            <td>{{dt_informasi.subjek}}</td>
+        </tr>
+        <tr>
+            <td>Kategori</td>
+            <td>{{dt_informasi.kategori}}</td>
+        </tr>
+        <tr>
+            <td>informasi :</td>
+            <td>{{dt_informasi.detail_informasi}}</td>
+        </tr>
+    </table>
+</div>
+
+<a class="btn btn-success" href="{{url_for('rmahasiswa.informasi')}}">Kembali</a>
+
+{% endblock %}

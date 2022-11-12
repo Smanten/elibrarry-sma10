@@ -1,0 +1,32 @@
+.jumbotron {
+    background-color: white;
+    
+}
+
+.container {
+    font-family: tahoma;
+}
+
+body{
+ /*background-image: url('../foto/latarhome.jpg');*/
+ width: auto;
+ height: auto;
+}
+
+.yy{
+    display: fixed;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+/*footer*/
+p.copy{
+    bottom: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    width: 100%;
+    position: fixed;
+    height:30px;
+    color:rgb(249, 22, 22);	
+    align-items: center;
+}
